@@ -1,0 +1,38 @@
+{
+  "materie": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "javascript",
+      "author": "Dario Mennillo"
+    },
+    {
+      "id": "43b2",
+      "title": "Spring",
+      "author": "Roberto Molino"
+    },
+    {
+      "id": "b8a2",
+      "title": "Bootstrap",
+      "author": "Oscar Vecchione"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "autore": {
+    "nome": "Dario Mennillo",
+    "data": "01/07/25"
+  }
+}
