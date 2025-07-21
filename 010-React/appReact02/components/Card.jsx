@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Card.css';
 
 // function Card(){
@@ -59,26 +60,17 @@ import './Card.css';
 //ciò che scrivo a mano nel parent all'interno del selettore child
 //Quindi children non è una semplice prop, bensì una parola chiave
 
-function Event(){
-    let btnA = document.querySelector("#btnA");
-    let btnNA = document.querySelector("#btnA");
-
-    btnA.addEventListener("onclick", function(){
-        // if(!isSpotted){
-        //     isSpotted.innerHTML += "Non avvistato";
-
-        // }
-    })
-
-    btnNA.addEventListener("onclick", function(){
-
-    })
-}
-
 function Card({ title, description, imgURL, children, isSpotteed }) {
+    const [bg, setBg] = useState(isSpotteed);
+    const text = bg ? "Avvistato" : "Non Avvistato";
+    // const setSfondoVerde = () => setBg(true);
+    // const setSfondoRosso = () => setBg(false);
+
+    const setSfondo = () => setBg(!bg);
+    
     return (
-        <div className="card">
-            <div className={`${isSpotteed ? "BgGreen" : "BgRed"}`}>
+        <div className={`${"card"} ${bg ? "BgGreen" : "BgRed"}`}>
+            {/* <div className={`${isSpotteed ? "BgGreen" : "BgRed"}`}> */}
                 <div className="card-image">
                     <img src={imgURL} alt="" />
                 </div>
@@ -89,14 +81,17 @@ function Card({ title, description, imgURL, children, isSpotteed }) {
                 </div>
                 <div>
                     <span>
-                        {isSpotteed ? "Avvistato" : "Non avvistato"}
+                        {/* {isSpotteed ? "Avvistato" : "Non avvistato"} */}
+                        {text}
                     </span>
                 </div>
-                <button id='btnA'>Avvistato</button>
-                <button id='btnNA'>Non Avvistato</button>
-            </div>
+                <button onClick={setSfondo}>Cambia Sfondo</button>
+                {/* <button onClick={setSfondoVerde}>Avvistato{bg}</button>
+                <button onClick={setSfondoRosso}>Non Avvistato{bg}</button> */}
+            {/* </div> */}
         </div>
     )
 }
+
 
 export default Card;
