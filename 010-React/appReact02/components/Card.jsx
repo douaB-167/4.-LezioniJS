@@ -79,12 +79,12 @@ function Card({ title, description, imgURL, children, isSpotteed }) {
                     <p>{description}</p>
                     <p>Commento: {children}</p>
                 </div>
-                <div>
-                    {/* <span>
+                {/* <div>
+                    <span>
                         {isSpotteed ? "Avvistato" : "Non avvistato"}
                         {text}
-                    </span> */}
-                </div>
+                    </span>
+                </div> */}
                 <button onClick={setSfondo}>{text}</button>
                 {/* <button onClick={setSfondoVerde}>Avvistato{bg}</button>
                 <button onClick={setSfondoRosso}>Non Avvistato{bg}</button> */}
