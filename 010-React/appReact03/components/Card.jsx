@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './Card.css';
 
-function Card({ title, description, imgURL, children, isSpotteed }) {
-    const [bg, setBg] = useState(isSpotteed);
+function Card({ title, description, imgURL, children, isSpotted }) {
+    const [bg, setBg] = useState(isSpotted);
     const text = bg ? "Avvistato" : "Non Avvistato";
 
     const setSfondo = () => setBg(!bg);
