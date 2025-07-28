@@ -4,8 +4,8 @@ import './ToDoList.css'
 function ToDoList({ todos, addTodo, removeTodo }) {
   return (
     <>
-      <Form addTodo={addTodo} />
-      <ul>
+      <Form addTodo={addTodo} >
+        <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
             {todo.todo} ({todo.data})
@@ -17,6 +17,7 @@ function ToDoList({ todos, addTodo, removeTodo }) {
           </li>
         ))}
       </ul>
+      </Form>
     </>
   )
 }

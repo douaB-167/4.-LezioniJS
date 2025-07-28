@@ -30,6 +30,7 @@ function Form({ addTodo }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>To Do List</h1>
       <div>
         <input
           type="text"

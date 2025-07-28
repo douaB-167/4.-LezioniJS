@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ToDoList from '../components/ToDoList'
 import './App.css'
+import CreateConnection from '../components/CreateConnection'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <ToDoList todos={todos} addTodo={addTodo} removeTodo={removeTodo} />
+      <CreateConnection></CreateConnection>
     </>
   )
 }
