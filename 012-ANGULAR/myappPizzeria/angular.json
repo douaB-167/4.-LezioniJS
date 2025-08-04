@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myapp1": {
+    "myappPizzeria": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -14,9 +14,6 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -60,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myapp1:build:production"
+              "buildTarget": "myappPizzeria:build:production"
             },
             "development": {
-              "buildTarget": "myapp1:build:development"
+              "buildTarget": "myappPizzeria:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,10 +71,6 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -92,8 +85,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

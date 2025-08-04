@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    @for (pizza of miePizze; track $index){
+      <div class="col-4">
+        <!-- <app-card
+        [id]=pizza.id
+        [nome]=pizza.nome
+        [imgURL]=pizza.imgURL 
+        ></app-card> -->
+        <app-card [dati]="pizza.dati"></app-card>
+      </div>
+    }
+  </div>
+</div>
